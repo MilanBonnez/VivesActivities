@@ -1,0 +1,26 @@
+﻿@model IList<VivesActivity>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="row">
+@foreach (var activity in Model)
+{
+    <div class="col-4">
+        <div class="card mb-2" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">@activity.Name</h5>
+                <h6 class="card-subtitle mb-2 text-muted">@activity.Type at @activity.Location</h6>
+                <p class="card-text">@activity.Description</p>
+                @* <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a> *@
+            </div>
+        </div>
+    </div>
+}
+</div>
